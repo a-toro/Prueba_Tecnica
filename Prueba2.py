@@ -13,6 +13,9 @@ B. s.compute -> Devuelve el valor computado de la operación aritmética, se deb
     caso de que la operación no pueda ser computada por paréntesis mal agrupados o en
     el caso de que s.operation sea false.
 """
+import warnings
+# Evitar mensajes de warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning)
 import parser
 
 class MyArray():
@@ -41,7 +44,7 @@ class MyArray():
             return False  
 
 # Ejemplos de uso
-a = "2+2)"
+a = "2+2+2+(2+2)+2)"
 b = "2 + 10 / 2 - 20" 
 c = "(2 + 10) / 2 - 20" 
 d = "(2 + 10 / 2 - 20"
